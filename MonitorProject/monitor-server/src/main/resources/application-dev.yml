@@ -1,0 +1,9 @@
+glimmer:
+  # 这里是数据库连接池的具体配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: MonitorDB
+    username: glimmer
+    password: 123456

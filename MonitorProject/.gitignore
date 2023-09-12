@@ -1,0 +1,10 @@
+**/target/
+.idea
+*.iml
+*.class
+*Test.java
+**/test/
+**/resources/photoSource/
+**/resources/videoSource/
+**/videos
+**/photos

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.glimmer.mapper.AlertTransactionMapper">
+
+
+    <update id="update">
+        update alert
+        <set>
+            <if test="id != null">id = #{id},</if>
+            <if test="caId != null">ca_id = #{caId},</if>
+            <if test="alertTime != null">alert_time = #{alertTime},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="pathPhoto != null">path_photo = #{pathPhoto},</if>
+            <if test="pathVideo != null">path_video = #{pathVideo},</if>
+        </set>
+    </update>
+</mapper>

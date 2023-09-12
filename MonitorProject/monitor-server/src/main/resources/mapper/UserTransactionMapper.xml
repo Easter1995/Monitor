@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.glimmer.mapper.UserTransactionMapper">
+
+    <!--动态sql更新用户表-->
+    <update id="update">
+        update user
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="passwd != null">
+                passwd = #{passwd},
+            </if>
+            <if test="role != null">
+                role = #{role},
+            </if>
+            <if test="releaseTime != null">
+                release_time = #{releaseTime},
+            </if>
+            <if test="deadlineTime != null">
+                deadline_time = #{deadlineTime},
+            </if>
+            <if test="loginStart != null">
+                login_start = #{loginStart},
+            </if>
+            <if test="loginEnd !=null">
+                login_end = #{loginEnd},
+            </if>
+            <if test="failTimes != null">
+                fail_times = #{failTimes},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+</mapper>
