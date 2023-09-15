@@ -39,7 +39,7 @@ public class GetInfoController {
     status为0表示成功，为1表示失败，为9表示内部错误。
     message返回对应的错误描述。
     */
-    //这部分需要你自己定义方法和返回类型
+
     @GetMapping("/info")
     public Result<GetCameraListVO> GetCameraInfo() {
         //调用业务层相关方法

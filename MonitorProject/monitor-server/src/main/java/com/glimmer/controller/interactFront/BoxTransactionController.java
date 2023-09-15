@@ -43,7 +43,7 @@ AddBox 函数用于添加检测框：注册的路由url为: /box/
 只有status和message两个字段，其中status int:0表示成功，1表示失败 9表示系统内部错误
 检测框可以有很多个，每次只是添加一个，所以数据库校验唯一性不重复的时候，是caId以及leftUp和rightDown的组合不能重复
 */
-    @PostMapping //Controller这部分不需要你写，你只需要写service和mapper层
+    @PostMapping
     public Result<StatusVO> AddBox(@RequestBody AddBoxDTO addBoxDTO) {
         log.info("添加检测框：{}",addBoxDTO);
         boxTransactionService.addBox(addBoxDTO);
@@ -82,7 +82,7 @@ status: int 0表示成功，1表示失败 9表示系统内部错误
 message: string 用于返回错误信息
 box: string 用于返回检测框的信息返回的字符串是"leftUp,rightDown|leftUp,rightDown|leftUp,rightDown"的形式
 */
-    //这部分需要你自己完成
+
     @GetMapping
     public Result<GetBoxVO> getBox(@RequestBody BoxDTO boxDTO) {
         log.info("根据caId接收检测框数据:{}",boxDTO);
